@@ -1,0 +1,88 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 510px;
+    justify-content: space-between;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#wrapper {
+    width: fit-content;
+    border: 2px solid #000000;
+}
+
+#wrapper > .row:nth-child(3),
+#wrapper > .row:nth-child(6) {
+    border-bottom: 2px solid;
+}
+
+#wrapper > .row .column:nth-child(3),
+#wrapper > .row .column:nth-child(6) {
+    border-right: 2px solid;
+}
+
+.row {
+    display: flex;
+    width: fit-content;
+}
+
+.column {
+    border: 0.1px solid;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    vertical-align: middle;
+    background: transparent;
+}
+
+.column input[type="text"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 42px;
+    text-align: center;
+    background: transparent;
+}
+
+.column-error {
+    background-color: #ff0000 !important;
+}
+
+.row-error {
+    background-color: #0000ff !important;
+}
+
+.row-column-error {
+    background: linear-gradient(to right, #ff0000, #0000ff);;
+}
+
+/* DARK MODE */
+
+body.dark {
+    background-color: #333333;
+    color: white;
+}
+
+body.dark .column input[type="text"] {
+    caret-color: #FFFFFF;
+    color: #FFFFFF;
+}

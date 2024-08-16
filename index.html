@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="switch.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SUDOKU</h1>
+            <!-- From Uiverse.io by andrew-demchenk0 -->
+            <label class="switch">
+                <span class="sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <circle r="5" cy="12" cx="12"></circle>
+                        <path
+                            d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="moon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 13.9066C19.805 14.6253 18.4055 15.0386 16.9095 15.0386C12.5198 15.0386 8.9612 11.4801 8.9612 7.09034C8.9612 5.59439 9.37447 4.19496 10.0931 3C6.03221 3.91866 3 7.5491 3 11.8878C3 16.9203 7.07968 21 12.1122 21C16.451 21 20.0815 17.9676 21 13.9066Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                <input type="checkbox" class="input" id="switch-input">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div id="wrapper">
+            <div class="row" data-row="1">
+                <div class="column"><input type="text" data-column="1" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="1"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="1"></div>
+            </div>
+            <div class="row" data-row="2">
+                <div class="column"><input type="text" data-column="1" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="2"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="2"></div>
+            </div>
+            <div class="row" data-row="3">
+                <div class="column"><input type="text" data-column="1" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="3"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="3"></div>
+            </div>
+            <div class="row" data-row="4">
+                <div class="column"><input type="text" data-column="1" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="4"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="4"></div>
+            </div>
+            <div class="row" data-row="5">
+                <div class="column"><input type="text" data-column="1" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="5"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="5"></div>
+            </div>
+            <div class="row" data-row="6">
+                <div class="column"><input type="text" data-column="1" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="6"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="6"></div>
+            </div>
+            <div class="row" data-row="7">
+                <div class="column"><input type="text" data-column="1" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="7"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="7"></div>
+            </div>
+            <div class="row" data-row="8">
+                <div class="column"><input type="text" data-column="1" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="8"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="8"></div>
+            </div>
+            <div class="row" data-row="9">
+                <div class="column"><input type="text" data-column="1" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="2" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="3" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="4" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="5" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="6" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="7" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="8" data-column-row="9"></div>
+                <div class="column"><input type="text" data-column="9" data-column-row="9"></div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
